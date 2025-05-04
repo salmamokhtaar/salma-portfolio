@@ -182,7 +182,7 @@ const ContactSection = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder="Salma"
                       required
                       className="rounded-lg"
                     />
@@ -197,7 +197,7 @@ const ContactSection = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder="your gmail@gmail.com"
                       required
                       className="rounded-lg"
                     />
