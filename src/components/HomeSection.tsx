@@ -15,11 +15,11 @@ const HomeSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 pt-10 pb-10 px-4 gradient-bg"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 pt-20 sm:pt-6 pb-10 px-4 gradient-bg"
     >
       {/* Text Section (Left) */}
       <div
-        className={`lg:w-1/2 ml-20 text-center lg:text-left flex flex-col justify-center ${
+        className={`lg:w-1/2 mx-auto lg:ml-10 xl:ml-20 text-center lg:text-left flex flex-col justify-center ${
           isVisible ? 'animate-fadeIn' : 'opacity-0'
         }`}
         style={{ transitionDelay: '0.2s' }}
@@ -67,17 +67,17 @@ const HomeSection = () => {
         </div>
 
         {/* Tech stack logos */}
-        <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+        <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4">
           <span className="text-sm text-gray-500 dark:text-gray-400 mr-2 self-center">Tech Stack:</span>
-          <div className="flex flex-wrap gap-6 items-center">
+          <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6 items-center justify-center lg:justify-start">
             {['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Flutter'].map((tech, index) => (
               <div
                 key={tech}
                 className="flex flex-col items-center group"
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
-                <div className="p-3 bg-white/70 dark:bg-gray-800/70 border border-gray-200/50 dark:border-gray-700/50 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-110">
-                  <TechStackLogo name={tech} className="w-7 h-7" />
+                <div className="p-2 sm:p-3 bg-white/70 dark:bg-gray-800/70 border border-gray-200/50 dark:border-gray-700/50 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-110">
+                  <TechStackLogo name={tech} className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </div>
                 <span className="mt-1 text-xs text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {tech}
@@ -92,12 +92,12 @@ const HomeSection = () => {
       <div className={`lg:w-1/2 flex justify-center items-center ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
         <div className="relative">
           {/* Decorative stars */}
-          <Star className="absolute -top-10 -left-8 text-portfolio-purple opacity-60 animate-pulse-gentle h-6 w-6" />
-          <Star className="absolute top-10 -right-10 text-portfolio-teal opacity-60 animate-pulse-gentle h-4 w-4" style={{ animationDelay: '0.5s' }} />
-          <Star className="absolute -bottom-8 -right-6 text-portfolio-coral opacity-60 animate-pulse-gentle h-5 w-5" style={{ animationDelay: '1s' }} />
+          <Star className="absolute -top-6 sm:-top-10 -left-6 sm:-left-8 text-portfolio-purple opacity-60 animate-pulse-gentle h-4 w-4 sm:h-6 sm:w-6" />
+          <Star className="absolute top-6 sm:top-10 -right-6 sm:-right-10 text-portfolio-teal opacity-60 animate-pulse-gentle h-3 w-3 sm:h-4 sm:w-4" style={{ animationDelay: '0.5s' }} />
+          <Star className="absolute -bottom-6 sm:-bottom-8 -right-4 sm:-right-6 text-portfolio-coral opacity-60 animate-pulse-gentle h-4 w-4 sm:h-5 sm:w-5" style={{ animationDelay: '1s' }} />
 
           {/* Main image with animated border */}
-          <div className="rounded-full w-72 h-72 md:w-96 md:h-96 overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border">
+          <div className="rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border">
             <img
               src="/salma.png"
               alt="Profile Image"
@@ -106,9 +106,9 @@ const HomeSection = () => {
           </div>
 
           {/* Floating decoration elements */}
-          <div className="absolute -top-6 -right-6 w-24 h-24 bg-portfolio-teal rounded-full opacity-20 blur-xl animate-pulse-gentle"></div>
-          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-portfolio-purple rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute -top-16 -left-16 w-20 h-20 bg-portfolio-coral rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-portfolio-teal rounded-full opacity-20 blur-xl animate-pulse-gentle"></div>
+          <div className="absolute -bottom-6 sm:-bottom-10 -left-6 sm:-left-10 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-portfolio-purple rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -top-10 sm:-top-16 -left-10 sm:-left-16 w-16 sm:w-20 h-16 sm:h-20 bg-portfolio-coral rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '3s' }}></div>
         </div>
       </div>
     </section>
