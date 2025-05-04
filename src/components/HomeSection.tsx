@@ -13,11 +13,11 @@ const HomeSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 pt-20 pb-10 px-4 gradient-bg"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 pt-16 pb-10 px-4 gradient-bg"
     >
       {/* Text Section (Left) */}
       <div 
-        className={`lg:w-1/2 text-center lg:text-left flex flex-col justify-center ${
+        className={`lg:w-1/2 ml-20 text-center lg:text-left flex flex-col justify-center ${
           isVisible ? 'animate-fadeIn' : 'opacity-0'
         }`}
         style={{ transitionDelay: '0.2s' }}
