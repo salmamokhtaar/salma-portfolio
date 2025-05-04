@@ -150,26 +150,26 @@ const SkillsSection = () => {
     {
       title: "Frontend",
       skills: [
-        { name: "HTML5 & CSS3", value: 90 },
+        { name: "HTML5 & CSS3", value: 98 },
         { name: "JavaScript (ES6+)", value: 85 },
-        { name: "React.js", value: 80 },
-        { name: "Tailwind CSS", value: 75 }
+        { name: "React.js", value: 95 },
+        { name: "Tailwind CSS", value: 85 }
       ],
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", value: 70 }, 
-        { name: "Express.js", value: 65 }, 
-        { name: "RESTful APIs", value: 70 }, 
-        { name: "PHP Laravel", value: 70 }
+        { name: "Node.js", value: 90 }, 
+        { name: "Express.js", value: 85 }, 
+        { name: "RESTful APIs", value: 80 }, 
+        { name: "PHP Laravel", value: 76 }
       ],
     },
     {
       title: "Mobile",
       skills: [
-        { name: "Flutter", value: 65 }, 
-        { name: "Dart", value: 60 }
+        { name: "Flutter", value: 75 }, 
+        { name: "Dart", value: 70 }
       ],
       badge: "App",
     },
@@ -177,7 +177,7 @@ const SkillsSection = () => {
       title: "Tools",
       skills: [
         { name: "Git & GitHub", value: 80 }, 
-        { name: "VS Code", value: 85 }, 
+        { name: "VS Code", value: 95 }, 
         { name: "Figma", value: 70 }
       ],
     },
@@ -185,9 +185,9 @@ const SkillsSection = () => {
       title: "Soft Skills",
       skills: [
         { name: "Communication", value: 90 }, 
-        { name: "Teamwork", value: 85 }, 
+        { name: "Teamwork", value: 95 }, 
         { name: "Problem Solving", value: 80 }, 
-        { name: "Adaptability", value: 85 }
+        { name: "Adaptability", value: 90 }
       ],
     },
   ];
@@ -233,7 +233,6 @@ const SkillsSection = () => {
                   <div key={skillIndex} className="space-y-1">
                     <div className="flex justify-between text-sm font-medium">
                       <span>{skill.name}</span>
-                      <span>{skill.value}%</span>
                     </div>
                     <Progress 
                       value={skill.value} 

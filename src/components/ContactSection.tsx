@@ -3,8 +3,10 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Github, Linkedin, ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
+import { Mail, Phone, ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useToast } from "@/components/ui/use-toast";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -27,27 +29,22 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission (replace with actual emailjs implementation)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
-      
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-    }, 1500);
-    
-    // Uncomment this section when implementing with actual EmailJS
-    /*
+
+    // Use EmailJS to send the form data - using send instead of sendForm
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: "Salma",
+      reply_to: formData.email,
+    };
+
     emailjs
-      .sendForm(
-        "service_l6f85vh",
-        "template_bc1ct57",
-        formRef.current!,
-        "_fUn8Di61Prf2a-DW"
+      .send(
+        "service_l6f85vh", // Your EmailJS service ID
+        "template_bc1ct57", // Your EmailJS template ID
+        templateParams,
+        "_fUn8Di61Prf2a-DW" // Your EmailJS public key
       )
       .then(() => {
         setIsSubmitting(false);
@@ -55,7 +52,7 @@ const ContactSection = () => {
         setFormData({ name: "", email: "", message: "" });
         toast({
           title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
+          description: "Your message has been sent to salmam.mohyadiin@gmail.com. I'll get back to you soon.",
         });
       })
       .catch((error) => {
@@ -64,12 +61,11 @@ const ContactSection = () => {
         toast({
           variant: "destructive",
           title: "Failed to send message",
-          description: "Please try again or contact me directly.",
+          description: "Please try again or contact me directly at salmam.mohyadiin@gmail.com.",
         });
       });
-    */
   };
-  
+
   const contactInfo = [
     {
       icon: <Phone className="h-5 w-5" />,
@@ -84,13 +80,13 @@ const ContactSection = () => {
       href: "mailto:salmam.mohyadiin@gmail.com",
     },
     {
-      icon: <Github className="h-5 w-5" />,
+      icon: <FaGithub className="h-5 w-5" />,
       label: "GitHub",
       value: "salmamokhtaar",
       href: "https://github.com/salmamokhtaar",
     },
     {
-      icon: <Linkedin className="h-5 w-5" />,
+      icon: <FaLinkedin className="h-5 w-5" />,
       label: "LinkedIn",
       value: "Salma Mokhtaar",
       href: "https://www.linkedin.com/in/salma-mokhtaar-0b4a11253/",
@@ -101,7 +97,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <h2 className="section-title">Let's Connect</h2>
-        
+
         <div className="mt-14 flex flex-col lg:flex-row gap-10">
           {/* Left: Contact Info */}
           <div className="lg:w-1/3 glassmorphism p-8">
@@ -112,15 +108,15 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">Salma Mukhtar</h3>
               <p className="text-portfolio-blue dark:text-portfolio-blue-light font-medium">Full-Stack Developer</p>
             </div>
-            
+
             <p className="text-center text-gray-700 dark:text-gray-300 mb-8">
               I'm always open to new opportunities, collaborations, and interesting projects.
               Let's build something great together!
             </p>
-            
-            <div className="space-y-6">
+
+            <div className="space-y-3">
               {contactInfo.map((item, index) => (
-                <a 
+                <a
                   key={index}
                   href={item.href}
                   target={item.label === "GitHub" || item.label === "LinkedIn" ? "_blank" : undefined}
@@ -137,14 +133,14 @@ const ContactSection = () => {
                 </a>
               ))}
             </div>
-            
+
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
               <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
                 Based in Mogadishu, Somalia
               </p>
             </div>
           </div>
-          
+
           {/* Right: Contact Form */}
           <div className="lg:w-2/3 glassmorphism p-8">
             <div className="mb-6">
@@ -153,7 +149,7 @@ const ContactSection = () => {
                 Have a project in mind or want to discuss something? Fill out the form below.
               </p>
             </div>
-            
+
             {formSubmitted ? (
               <div className="py-12 text-center animate-fadeIn">
                 <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400 mb-6">
@@ -161,9 +157,9 @@ const ContactSection = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">Thank You!</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Your message has been sent successfully. I'll get back to you soon!
+                  Your message has been sent successfully to salmam.mohyadiin@gmail.com. I'll get back to you soon!
                 </p>
-                <Button 
+                <Button
                   onClick={() => setFormSubmitted(false)}
                   className="rounded-full"
                 >
