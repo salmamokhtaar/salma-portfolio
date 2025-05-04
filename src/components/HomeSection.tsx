@@ -1,0 +1,112 @@
+
+import { Button } from "@/components/ui/button";
+import { Download, ArrowRight, Star } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+const HomeSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <section
+      id="home"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 pt-20 pb-10 px-4 gradient-bg"
+    >
+      {/* Text Section (Left) */}
+      <div 
+        className={`lg:w-1/2 text-center lg:text-left flex flex-col justify-center ${
+          isVisible ? 'animate-fadeIn' : 'opacity-0'
+        }`}
+        style={{ transitionDelay: '0.2s' }}
+      >
+        <div className="mb-4">
+          <span className="px-4 py-1 rounded-full text-sm font-medium inline-block animated-border">
+            <span className="bg-gradient-to-r from-portfolio-teal via-portfolio-purple to-portfolio-coral bg-clip-text text-transparent">
+              Full-Stack Developer
+            </span>
+          </span>
+        </div>
+        <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          Hey, I'm <span className="bg-gradient-to-r from-portfolio-purple via-portfolio-teal to-portfolio-coral bg-clip-text text-transparent">Salma</span>
+        </h1>
+        <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Crafting innovative web solutions with a passion for clean code and user-centric design. I build seamless and efficient web applications, combining technical expertise with creative problem-solving.
+        </p>
+        
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2">
+          <Button 
+            asChild 
+            className="rounded-full bg-gradient-to-r from-portfolio-purple to-portfolio-teal hover:shadow-lg transition-all duration-300 animate-bounce-subtle"
+            style={{ animationDelay: '0.6s' }}
+          >
+            <a
+              href="/Salma_FullStack Developer.pdf"
+              download
+              className="flex items-center"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download CV
+            </a>
+          </Button>
+          <Button 
+            asChild 
+            variant="outline" 
+            className="rounded-full border-portfolio-purple text-portfolio-purple hover:text-white hover:bg-portfolio-purple dark:border-portfolio-purple-light dark:text-portfolio-purple-light dark:hover:bg-portfolio-purple-light dark:hover:text-gray-900 group"
+          >
+            <a
+              href="#contact"
+              className="flex items-center"
+            >
+              Let's Talk
+              <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+        </div>
+
+        {/* Tech stack pills */}
+        <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-2">
+          <span className="text-sm text-gray-500 dark:text-gray-400 mr-2 self-center">Tech Stack:</span>
+          {['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Flutter'].map((tech, index) => (
+            <span 
+              key={tech} 
+              className="px-3 py-1 bg-white/70 dark:bg-gray-800/70 border border-gray-200/50 dark:border-gray-700/50 rounded-full text-sm shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
+              style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Image Section (Right) */}
+      <div className={`lg:w-1/2 flex justify-center items-center ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
+        <div className="relative">
+          {/* Decorative stars */}
+          <Star className="absolute -top-10 -left-8 text-portfolio-purple opacity-60 animate-pulse-gentle h-6 w-6" />
+          <Star className="absolute top-10 -right-10 text-portfolio-teal opacity-60 animate-pulse-gentle h-4 w-4" style={{ animationDelay: '0.5s' }} />
+          <Star className="absolute -bottom-8 -right-6 text-portfolio-coral opacity-60 animate-pulse-gentle h-5 w-5" style={{ animationDelay: '1s' }} />
+          
+          {/* Main image with animated border */}
+          <div className="rounded-full w-72 h-72 md:w-96 md:h-96 overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border">
+            <img
+              src="/salma.png"
+              alt="Profile Image"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          
+          {/* Floating decoration elements */}
+          <div className="absolute -top-6 -right-6 w-24 h-24 bg-portfolio-teal rounded-full opacity-20 blur-xl animate-pulse-gentle"></div>
+          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-portfolio-purple rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -top-16 -left-16 w-20 h-20 bg-portfolio-coral rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '3s' }}></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HomeSection;
