@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="py-10 px-4 bg-gray-50 dark:bg-gray-900/90 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto">
@@ -17,33 +17,33 @@ const Footer = () => {
               &copy; {currentYear} Salma Mukhtar. All rights reserved.
             </p>
           </div>
-          
+
           {/* Quick Links */}
           <div className="mb-6 md:mb-0">
             <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               <li>
-                <a href="#home" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <a href="home" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <a href="about" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
                   About
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <a href="projects" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <a href="contact" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
                   Contact
                 </a>
               </li>
             </ul>
           </div>
-          
+
           {/* Social Links */}
           <div className="flex space-x-4">
             <a
@@ -73,7 +73,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         {/* Credit line */}
         <div className="mt-8 text-center text-xs text-gray-500 dark:text-gray-500">
           <p>Designed and built with passion by Salma Mukhtar.</p>

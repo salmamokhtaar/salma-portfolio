@@ -68,7 +68,6 @@ const HomeSection = () => {
 
         {/* Tech stack logos */}
         <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4">
-          <span className="text-sm text-gray-500 dark:text-gray-400 mr-2 self-center">Tech Stack:</span>
           <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6 items-center justify-center lg:justify-start">
             {['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Flutter'].map((tech, index) => (
               <div
