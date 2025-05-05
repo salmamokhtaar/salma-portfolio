@@ -38,7 +38,6 @@ const EducationSection = () => {
             {/* Achievement badges */}
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 rounded-full text-xs font-medium">Top Graduate</span>
-              <span className="px-3 py-1 bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-xs font-medium">Merit Scholarship</span>
             </div>
           </div>
           

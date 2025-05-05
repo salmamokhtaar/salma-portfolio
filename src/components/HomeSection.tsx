@@ -35,7 +35,7 @@ const HomeSection = () => {
           Hey, I'm <span className="bg-gradient-to-r from-portfolio-purple via-portfolio-teal to-portfolio-coral bg-clip-text text-transparent">Salma</span>
         </h1>
         <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-          Crafting innovative web solutions with a passion for clean code and user-centric design. I build seamless and efficient web applications, combining technical expertise with creative problem-solving.
+          I build high-quality full-stack web and mobile applications with a focus on clean code, intuitive design, and seamless user experiences. Specializing in Flutter and MERN stack technologies, I combine technical expertise with creative problem-solving to deliver responsive, user-focused solutions that drive real business value.
         </p>
 
         {/* Buttons */}
