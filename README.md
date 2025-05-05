@@ -1,5 +1,5 @@
 # Salma Mukhtar - Full Stack Developer Portfolio
-Live Link: https://salmadev-one.vercel.app/
+Live Link: https://salmadevs.vercel.app/
 
 ![Salma's Portfolio](public/sa.png)
 
