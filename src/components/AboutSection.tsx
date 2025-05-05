@@ -16,12 +16,14 @@ const AboutSection = () => {
         <div className="mt-14 flex flex-col md:flex-row items-center gap-10 mb-12">
           {/* Image with decoration */}
           <div className="md:w-1/3 w-full flex justify-center relative">
-            <div className="relative w-72 h-96 overflow-hidden shadow-xl rounded-xl border-4 border-white dark:border-gray-800 z-10">
+            <div className="relative w-72 h-96 overflow-hidden shadow-xl rounded-xl border-4 border-white dark:border-gray-800 z-10 bg-gradient-to-b from-portfolio-blue/5 to-portfolio-purple/5">
               <img
                 src="/salmas.jpeg"
                 alt="Salma Mukhtar"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover filter contrast-105 brightness-105"
+                style={{ objectPosition: 'center center' }}
               />
+              <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
             </div>
             {/* Decorative elements */}
             <div className="absolute top-4 -left-4 w-full h-full bg-portfolio-blue opacity-10 rounded-xl -z-10 transform -rotate-6"></div>

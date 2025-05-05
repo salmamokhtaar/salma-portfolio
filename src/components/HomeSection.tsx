@@ -96,12 +96,14 @@ const HomeSection = () => {
           <Star className="absolute -bottom-6 sm:-bottom-8 -right-4 sm:-right-6 text-portfolio-coral opacity-60 animate-pulse-gentle h-4 w-4 sm:h-5 sm:w-5" style={{ animationDelay: '1s' }} />
 
           {/* Main image with animated border */}
-          <div className="rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border">
+          <div className="rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border relative bg-gradient-to-b from-portfolio-purple/10 to-portfolio-teal/10">
             <img
               src="/salma.png"
               alt="Profile Image"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 filter contrast-105 brightness-105"
+              style={{ objectPosition: 'center center' }}
             />
+            <div className="absolute inset-0 shadow-inner pointer-events-none"></div>
           </div>
 
           {/* Floating decoration elements */}
