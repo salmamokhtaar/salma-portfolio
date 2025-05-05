@@ -32,7 +32,7 @@ const ProjectsSection = () => {
       image: "/brs.png",
       repoLink: "https://github.com/salmamokhtaar/BRS",
       liveLink: "https://brs-liart.vercel.app/",
-      category: "Backend",
+      category: "Fullstack",
       tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
     },
     {
@@ -42,7 +42,7 @@ const ProjectsSection = () => {
       image: "/image.png",
       repoLink: "https://github.com/salmamokhtaar/frontend",
       liveLink: "https://github.com/salmamokhtaar/frontend",
-      category: "Backend",
+      category: "Fullstack",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
     },
     {
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       image: "/caawiye.jpeg",
       repoLink: "https://github.com/salmamokhtaar/Exactly",
       liveLink: "https://github.com/salmamokhtaar/Exactly",
-      category: "All",
+      category: "App",
       tech: ["Flutter", "Dart"],
       featured: true,
     },
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
       image: "/sara.png",
       repoLink: "https://github.com/salmamokhtaar/FrontEndProject",
       liveLink: "https://salmamokhtaar.github.io/FrontEndProject/",
-      category: "Frontend",
+      category: "Fullstack",
       tech: ["HTML", "CSS", "JavaScript"],
     },
     {
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
       image: "/job.png",
       repoLink: "https://github.com/salmamokhtaar/ClientSide",
       liveLink: "https://client-side-lake.vercel.app/",
-      category: "Backend",
+      category: "Fullstack",
       tech: ["React.js", "Node.js", "MongoDB", "Express.js"],
     },
     {
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
       image: "/som.png",
       repoLink: "https://github.com/salmamokhtaar/SomaliQuotes",
       liveLink: "https://somaliquotesmaahmaahyo.vercel.app/",
-      category: "Frontend",
+      category: "Fullstack",
       tech: ["React", "CSS"],
     },
     {
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
       image: "/tas.png",
       repoLink: "https://github.com/salmamokhtaar/TasbihprojectReact",
       liveLink: "https://tasbihproject-react.vercel.app/",
-      category: "Frontend",
+      category: "Fullstack",
       tech: ["React", "Tailwind CSS"],
     },
     {
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
       image: "/lan.png",
       repoLink: "https://github.com/salmamokhtaar/Agrivast-Design",
       liveLink: "https://salmamokhtaar.github.io/Agrivast-Design/",
-      category: "Frontend",
+      category: "Fullstack",
       tech: ["HTML", "CSS"],
     },
     {
@@ -113,7 +113,7 @@ const ProjectsSection = () => {
       image: "/har.png",
       repoLink: "https://github.com/salmamokhtaar/Harizons",
       liveLink: "https://harizon.vercel.app/",
-      category: "Backend",
+      category: "Fullstack",
       tech: ["React", "Node.js"],
     },
   ];
@@ -136,7 +136,7 @@ const ProjectsSection = () => {
 
         {/* Filter Buttons */}
         <div className="mb-10 flex flex-wrap justify-center gap-3">
-          {["All", "Frontend", "Backend"].map((category, index) => (
+          {["All", "Fullstack", "App"].map((category, index) => (
             <Button
               key={category}
               onClick={() => setFilter(category)}
@@ -154,7 +154,7 @@ const ProjectsSection = () => {
             <div
               key={index}
               className={`glassmorphism overflow-hidden group transition-all duration-500 hover:shadow-xl ${inView ? 'animate-fadeIn' : 'opacity-0'}`}
-              style={{ 
+              style={{
                 transitionDelay: `${0.1 * (index % 3 + 1)}s`,
                 borderImage: project.featured ? 'linear-gradient(45deg, rgb(155, 135, 245), rgb(56, 178, 172), rgb(249, 115, 22)) 1' : '',
                 borderImageSlice: project.featured ? '1' : '',
@@ -190,7 +190,7 @@ const ProjectsSection = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-0 left-0 w-full px-3 py-1.5 bg-gradient-to-r from-portfolio-purple/80 to-portfolio-teal/80 text-white flex items-center justify-center gap-1.5">
@@ -205,7 +205,7 @@ const ProjectsSection = () => {
                 <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-portfolio-purple to-portfolio-teal bg-clip-text text-transparent">
                   {project.title}
                 </h3>
-                
+
                 {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.tech?.map((tech, i) => (
@@ -214,11 +214,11 @@ const ProjectsSection = () => {
                     </Badge>
                   ))}
                 </div>
-                
+
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex justify-between items-center pt-2 border-t border-gray-100 dark:border-gray-800">
                   <a
                     href={project.repoLink}
