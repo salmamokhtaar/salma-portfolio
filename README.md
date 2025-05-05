@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# Salma Mukhtar - Full Stack Developer Portfolio
 
-## Project info
+![Salma's Portfolio](public/sa.png)
 
-**URL**: https://lovable.dev/projects/6fb60084-018c-4d55-a051-959cf9fd42a8
+## 🌟 Overview
 
-## How can I edit this code?
+Welcome to my professional portfolio website! This modern, responsive portfolio showcases my skills, projects, and experience as a Full Stack Developer. Built with React, TypeScript, and Tailwind CSS, it features a clean design with both light and dark modes.
 
-There are several ways of editing your application.
+As a passionate developer based in Mogadishu, Somalia, I specialize in creating seamless web applications with a focus on user experience and clean code. This portfolio highlights my journey, technical expertise, and the projects I've built.
 
-**Use Lovable**
+## ✨ Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6fb60084-018c-4d55-a051-959cf9fd42a8) and start prompting.
+- **Responsive Design**: Fully responsive layout that works perfectly on all devices
+- **Dark/Light Mode**: Toggle between dark and light themes based on your preference
+- **Smooth Scrolling**: Seamless navigation between different sections
+- **Interactive UI**: Engaging user interface with subtle animations and transitions
+- **Contact Form**: Integrated EmailJS for direct communication
+- **Tech Stack Visualization**: Interactive tech stack logos with hover effects
+- **Project Showcase**: Detailed project cards with links to live demos and repositories
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+<div style="display: flex; gap: 10px;">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+</div>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **UI Components**: shadcn/ui for consistent and accessible components
+- **Build Tool**: Vite for fast development and optimized production builds
+- **Icons**: Lucide React, React Icons
+- **Form Handling**: EmailJS for serverless contact form
+- **Animations**: Custom CSS animations and transitions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📱 Portfolio Sections
 
-Follow these steps:
+### 🏠 Home
+A welcoming introduction with my name, role, and a brief description of my work. Features animated tech stack logos and a professional profile image.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 👩‍💻 About
+Details about my professional background, education, and a comprehensive overview of my skills and experience. Includes information about my participation in GirlsInICT 2025.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🔧 Skills
+A detailed breakdown of my technical skills categorized by:
+- Frontend: HTML5, CSS3, JavaScript, React.js, Tailwind CSS
+- Backend: Node.js, Express.js, RESTful APIs, PHP Laravel
+- Mobile: Flutter, Dart
+- Tools: Git & GitHub, VS Code, Figma
+- Soft Skills: Communication, Teamwork, Problem Solving, Adaptability
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🚀 Projects
+Showcase of my key projects including:
+- BRS: Business Registration System
+- She&Shine: E-commerce platform for women's and kids' fashion
+- Job Portal: Full-stack application for job seekers and employers
+- Somali Quotes: Interactive application showcasing Somali proverbs
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Each project includes a description, technologies used, and links to live demos and GitHub repositories.
 
-**Edit a file directly in GitHub**
+### 📬 Contact
+A user-friendly contact form integrated with EmailJS, along with my contact information including phone, email, GitHub, and LinkedIn profiles.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🚀 Getting Started
 
-**Use GitHub Codespaces**
+### Prerequisites
+- Node.js (v14.0.0 or later)
+- npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. Clone the repository
+   ```bash
+   git clone https://github.com/salmamokhtaar/portfolio-website.git
+   ```
 
-This project is built with:
+2. Navigate to the project directory
+   ```bash
+   cd portfolio-website
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Install dependencies
+   ```bash
+   npm install
+   ```
 
-## How can I deploy this project?
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/6fb60084-018c-4d55-a051-959cf9fd42a8) and click on Share -> Publish.
+5. Open your browser and visit `http://localhost:8080`
 
-## Can I connect a custom domain to my Lovable project?
+## 🌐 Deployment
 
-Yes, you can!
+This portfolio is deployed using Vercel for fast global access. The deployment process is straightforward:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Push your code to a GitHub repository
+2. Connect your repository to Vercel
+3. Configure build settings if necessary
+4. Deploy!
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+Designed and developed with ❤️ by Salma Mukhtar
+
+Connect with me:
+- GitHub: [salmamokhtaar](https://github.com/salmamokhtaar)
+- LinkedIn: [Salma Mokhtaar](https://www.linkedin.com/in/salma-mokhtaar-0b4a11253/)
+- Email: salmam.mohyadiin@gmail.com
