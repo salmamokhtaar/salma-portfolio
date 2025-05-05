@@ -15,11 +15,11 @@ const HomeSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 pt-20 sm:pt-6 pb-10 px-4 gradient-bg"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-between pt-20 sm:pt-6 pb-10 px-4 md:px-8 lg:px-12 xl:px-20 gradient-bg"
     >
       {/* Text Section (Left) */}
       <div
-        className={`lg:w-1/2 mx-auto lg:ml-10 xl:ml-20 text-center lg:text-left flex flex-col justify-center ${
+        className={`w-full lg:w-5/12 xl:w-5/12 mx-auto lg:mx-0 text-center lg:text-left flex flex-col justify-center ${
           isVisible ? 'animate-fadeIn' : 'opacity-0'
         }`}
         style={{ transitionDelay: '0.2s' }}
@@ -34,7 +34,7 @@ const HomeSection = () => {
         <h1 className="text-5xl md:text-6xl font-bold mb-4">
           Hey, I'm <span className="bg-gradient-to-r from-portfolio-purple via-portfolio-teal to-portfolio-coral bg-clip-text text-transparent">Salma</span>
         </h1>
-        <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+        <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
           Crafting innovative web solutions with a passion for clean code and user-centric design. I build seamless and efficient web applications, combining technical expertise with creative problem-solving.
         </p>
 
@@ -67,8 +67,8 @@ const HomeSection = () => {
         </div>
 
         {/* Tech stack logos */}
-        <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4">
-          <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6 items-center justify-center lg:justify-start">
+        <div className="mt-10 flex flex-wrap justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-8 items-center justify-center lg:justify-start">
             {['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Flutter'].map((tech, index) => (
               <div
                 key={tech}
@@ -88,7 +88,7 @@ const HomeSection = () => {
       </div>
 
       {/* Image Section (Right) */}
-      <div className={`lg:w-1/2 flex justify-center items-center ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
+      <div className={`w-full lg:w-6/12 xl:w-5/12 flex justify-center items-center mt-10 lg:mt-0 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
         <div className="relative">
           {/* Decorative stars */}
           <Star className="absolute -top-6 sm:-top-10 -left-6 sm:-left-8 text-portfolio-purple opacity-60 animate-pulse-gentle h-4 w-4 sm:h-6 sm:w-6" />
@@ -96,7 +96,7 @@ const HomeSection = () => {
           <Star className="absolute -bottom-6 sm:-bottom-8 -right-4 sm:-right-6 text-portfolio-coral opacity-60 animate-pulse-gentle h-4 w-4 sm:h-5 sm:w-5" style={{ animationDelay: '1s' }} />
 
           {/* Main image with animated border */}
-          <div className="rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border">
+          <div className="rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border">
             <img
               src="/salma.png"
               alt="Profile Image"
@@ -105,9 +105,9 @@ const HomeSection = () => {
           </div>
 
           {/* Floating decoration elements */}
-          <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-portfolio-teal rounded-full opacity-20 blur-xl animate-pulse-gentle"></div>
-          <div className="absolute -bottom-6 sm:-bottom-10 -left-6 sm:-left-10 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-portfolio-purple rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute -top-10 sm:-top-16 -left-10 sm:-left-16 w-16 sm:w-20 h-16 sm:h-20 bg-portfolio-coral rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 w-16 sm:w-20 md:w-24 lg:w-32 h-16 sm:h-20 md:h-24 lg:h-32 bg-portfolio-teal rounded-full opacity-20 blur-xl animate-pulse-gentle"></div>
+          <div className="absolute -bottom-6 sm:-bottom-10 -left-6 sm:-left-10 w-20 sm:w-24 md:w-32 lg:w-40 h-20 sm:h-24 md:h-32 lg:h-40 bg-portfolio-purple rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -top-10 sm:-top-16 -left-10 sm:-left-16 w-16 sm:w-20 md:w-24 lg:w-28 h-16 sm:h-20 md:h-24 lg:h-28 bg-portfolio-coral rounded-full opacity-20 blur-xl animate-float" style={{ animationDelay: '3s' }}></div>
         </div>
       </div>
     </section>
