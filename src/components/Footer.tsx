@@ -1,5 +1,6 @@
 
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { scrollToSection } from '@/lib/scrollUtils';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,24 +23,36 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               <li>
-                <a href="home" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <button
+                  onClick={() => scrollToSection('home')}
+                  className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm"
+                >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a href="about" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm"
+                >
                   About
-                </a>
+                </button>
               </li>
               <li>
-                <a href="projects" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm"
+                >
                   Projects
-                </a>
+                </button>
               </li>
               <li>
-                <a href="contact" className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm">
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-gray-600 hover:text-portfolio-blue dark:text-gray-400 dark:hover:text-portfolio-blue-light text-sm"
+                >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>

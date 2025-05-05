@@ -1,5 +1,5 @@
 /**
- * Smoothly scrolls to the specified element ID and updates URL without # symbol
+ * Smoothly scrolls to the specified element ID without changing the URL
  */
 export const scrollToSection = (elementId: string): void => {
   const element = document.getElementById(elementId);
@@ -9,8 +9,5 @@ export const scrollToSection = (elementId: string): void => {
       behavior: 'smooth',
       block: 'start',
     });
-
-    // Update URL without # symbol and without triggering a page reload
-    window.history.pushState({}, '', `/${elementId}`);
   }
 };
