@@ -40,8 +40,8 @@ const ProjectsSection = () => {
       description:
         "E-commerce platform for women's and kids' fashion. Built with the MERN stack, supports wishlist, cart, and admin features.",
       image: "/image.png",
-      repoLink: "https://github.com/salmamokhtaar/frontend",
-      liveLink: "https://github.com/salmamokhtaar/frontend",
+      repoLink: "https://github.com/salmamokhtaar/FullEcommerce",
+      liveLink: "https://shenshine.vercel.app/",
       category: "Fullstack",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
     },
