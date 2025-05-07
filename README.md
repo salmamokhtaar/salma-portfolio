@@ -64,50 +64,6 @@ Each project includes a description, technologies used, and links to live demos 
 ### 📬 Contact
 A user-friendly contact form integrated with EmailJS, along with my contact information including phone, email, GitHub, and LinkedIn profiles.
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v14.0.0 or later)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/salmamokhtaar/portfolio-website.git
-   ```
-
-2. Navigate to the project directory
-   ```bash
-   cd portfolio-website
-   ```
-
-3. Install dependencies
-   ```bash
-   npm install
-   ```
-
-4. Start the development server
-   ```bash
-   npm run dev
-   ```
-
-5. Open your browser and visit `http://localhost:8080`
-
-## 🌐 Deployment
-
-This portfolio is deployed using Vercel for fast global access. The deployment process is straightforward:
-
-1. Push your code to a GitHub repository
-2. Connect your repository to Vercel
-3. Configure build settings if necessary
-4. Deploy!
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
 
 Designed and developed with ❤️ by Salma Mukhtar
 
