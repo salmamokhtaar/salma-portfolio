@@ -90,7 +90,7 @@ const ProjectsSection = () => {
       title: "Tasbih Project",
       description:
         "Tasbih is a simple React-based project for digital counting, featuring increment, decrement, and reset buttons.",
-      image: "/tas.png",
+      image: "tasbix.png",
       repoLink: "https://github.com/salmamokhtaar/TasbihprojectReact",
       liveLink: "https://tasbihproject-react.vercel.app/",
       category: "Fullstack",
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
       title: "Landing",
       description:
         "A visually appealing landing page built using HTML and CSS, designed to showcase key content and engage users.",
-      image: "/lan.png",
+      image: "/agr.png",
       repoLink: "https://github.com/salmamokhtaar/Agrivast-Design",
       liveLink: "https://salmamokhtaar.github.io/Agrivast-Design/",
       category: "Fullstack",
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
       title: "Harizon",
       description:
         "My first client project, created for a translation and editing business. Developed voluntarily and completed despite challenges.",
-      image: "/har.png",
+      image: "/hari.png",
       repoLink: "https://github.com/salmamokhtaar/Harizons",
       liveLink: "https://harizon.vercel.app/",
       category: "Fullstack",
