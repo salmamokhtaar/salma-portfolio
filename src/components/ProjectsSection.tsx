@@ -30,8 +30,8 @@ const ProjectsSection = () => {
       description:
         "Modern web app for business registration. Top 3 at SomNOG 7 for innovation and impact.",
       image: "/brs.png",
-      repoLink: "https://github.com/salmamokhtaar/BRS",
-      liveLink: "https://brs-liart.vercel.app/",
+      repoLink: "https://github.com/salmamokhtaar/BRSFrontend",
+      liveLink: "https://businessregistration.vercel.app/",
       category: "Fullstack",
       tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
     },
