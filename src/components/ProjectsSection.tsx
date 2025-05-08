@@ -116,6 +116,16 @@ const ProjectsSection = () => {
       category: "Fullstack",
       tech: ["React", "Node.js"],
     },
+    {
+      title: "Broccoli",
+      description:
+        "Broccoli Organic – E-commerce Website A clean and responsive e-commerce website for an organic food store. Features include product listings, category filters, and a shopping cart system. Built using React.js and Tailwind CSS with a focus on user-friendly design and smooth functionality.",
+      image: "/broccolli.png",
+      repoLink: "https://github.com/salmamokhtaar/Broccoli",
+      liveLink: "https://broccoliorganic.vercel.app/",
+      category: "Fullstack",
+      tech: ["React", "Tailwind CSS", "Vite"],
+    },
   ];
 
   const filteredProjects =
