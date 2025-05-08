@@ -80,7 +80,7 @@ const ProjectsSection = () => {
       title: "Somali Quotes",
       description:
         "Somali Quotes showcases Somali Maahmaahyo (proverbs) with a Next and Previous button for easy navigation.",
-      image: "image copy.png",
+      image: "soma.png",
       repoLink: "https://github.com/salmamokhtaar/SomaliQuotes",
       liveLink: "https://somaliquotesmaahmaahyo.vercel.app/",
       category: "Fullstack",
