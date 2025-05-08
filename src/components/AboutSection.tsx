@@ -73,7 +73,7 @@ const AboutSection = () => {
 
                 {/* Experience */}
                 <div className="flex items-start gap-3">
-                  <Calendar className="h-5 w-5 text-portfolio-coral flex-shrink-0 mt-0.5" />
+                  <Calendar className="h-5 w-7 text-portfolio-coral flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="block text-sm font-medium text-gray-900 dark:text-gray-100">Experience</span>
                     <span className="text-sm text-gray-600 dark:text-gray-300">2+ Years</span>

@@ -84,7 +84,7 @@ const ProjectsSection = () => {
       repoLink: "https://github.com/salmamokhtaar/SomaliQuotes",
       liveLink: "https://somaliquotesmaahmaahyo.vercel.app/",
       category: "Fullstack",
-      tech: ["React", "CSS"],
+      tech: ["React", "Tailwind"],
     },
     {
       title: "Tasbih Project",
