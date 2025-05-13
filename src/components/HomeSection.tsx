@@ -88,7 +88,7 @@ const HomeSection = () => {
       </div>
 
       {/* Image Section (Right) */}
-      <div className={`hidden sm:block  w-full lg:w-5/12 xl:w-5/12 flex justify-center items-center mt-10 lg:mt-0 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
+      <div className={`w-full lg:w-5/12 xl:w-5/12 flex justify-center items-center mt-10 lg:mt-0 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
         <div className="relative">
           {/* Decorative stars */}
           <Star className="absolute -top-6 sm:-top-10 -left-6 sm:-left-8 text-portfolio-purple opacity-60 animate-pulse-gentle h-4 w-4 sm:h-6 sm:w-6" />
@@ -96,7 +96,7 @@ const HomeSection = () => {
           <Star className="absolute -bottom-6 sm:-bottom-8 -right-4 sm:-right-6 text-portfolio-coral opacity-60 animate-pulse-gentle h-4 w-4 sm:h-5 sm:w-5" style={{ animationDelay: '1s' }} />
 
           {/* Main image with animated border */}
-          <div className="rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border relative bg-gradient-to-b from-portfolio-purple/10 to-portfolio-teal/10">
+          <div className="hidden sm:block  rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] overflow-hidden shadow-2xl animate-float border-4 border-white dark:border-gray-700 animated-border relative bg-gradient-to-b from-portfolio-purple/10 to-portfolio-teal/10">
             <img
               src="/salma.png"
               alt="Profile Image"
