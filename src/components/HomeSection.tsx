@@ -15,11 +15,11 @@ const HomeSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-between pt-20 sm:pt-6 pb-10 px-4 md:px-8 lg:px-12 xl:px-20 gradient-bg"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-between pt-16 sm:pt-6 pb-10 px-4 md:px-6 lg:px-8 xl:px-12 gradient-bg"
     >
       {/* Text Section (Left) */}
       <div
-        className={`w-full lg:w-5/12 xl:w-5/12 mx-auto lg:mx-0 text-center lg:text-left flex flex-col justify-center ${
+        className={`w-full lg:w-5/12 xl:w-5/12 mx-auto  flex flex-col justify-center ${
           isVisible ? 'animate-fadeIn' : 'opacity-0'
         }`}
         style={{ transitionDelay: '0.2s' }}
@@ -31,7 +31,7 @@ const HomeSection = () => {
             </span>
           </span>
         </div>
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Hey, I'm <span className="bg-gradient-to-r from-portfolio-purple via-portfolio-teal to-portfolio-coral bg-clip-text text-transparent">Salma</span>
         </h1>
         <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -88,7 +88,7 @@ const HomeSection = () => {
       </div>
 
       {/* Image Section (Right) */}
-      <div className={`w-full lg:w-6/12 xl:w-5/12 flex justify-center items-center mt-10 lg:mt-0 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
+      <div className={`hidden sm:block  w-full lg:w-5/12 xl:w-5/12 flex justify-center items-center mt-10 lg:mt-0 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
         <div className="relative">
           {/* Decorative stars */}
           <Star className="absolute -top-6 sm:-top-10 -left-6 sm:-left-8 text-portfolio-purple opacity-60 animate-pulse-gentle h-4 w-4 sm:h-6 sm:w-6" />
