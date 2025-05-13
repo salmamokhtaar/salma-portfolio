@@ -163,15 +163,7 @@ const Header = () => {
                 {link.name}
               </button>
             ))}
-            <Button
-              className="w-full mt-2 rounded-full bg-gradient-to-r from-portfolio-purple to-portfolio-teal"
-              onClick={() => {
-                scrollToSection('contact');
-                toggleMobileMenu(false);
-              }}
-            >
-              Let's Talk <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
+         
           </div>
         </nav>
       )}

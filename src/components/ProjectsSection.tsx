@@ -1,34 +1,20 @@
+'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Eye, ExternalLink, Star } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  repoLink: string;
-  liveLink: string;
-  category: string;
-  tech?: string[];
-  featured?: boolean;
-}
-
 const ProjectsSection = () => {
   const [filter, setFilter] = useState("All");
   const [showAll, setShowAll] = useState(false);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  const projects: Project[] = [
+  const projects = [
     {
       title: "BRS",
-      description:
-        "Modern web app for business registration. Top 3 at SomNOG 7 for innovation and impact.",
+      description: "Modern web app for business registration. Top 3 at SomNOG 7 for innovation and impact.",
       image: "/brs.png",
       repoLink: "https://github.com/salmamokhtaar/BRSFrontend",
       liveLink: "https://businessregistration.vercel.app/",
@@ -37,8 +23,7 @@ const ProjectsSection = () => {
     },
     {
       title: "She&Shine",
-      description:
-        "E-commerce platform for women's and kids' fashion. Built with the MERN stack, supports wishlist, cart, and admin features.",
+      description: "E-commerce platform for women's and kids' fashion. Built with the MERN stack.",
       image: "/image.png",
       repoLink: "https://github.com/salmamokhtaar/She-Shine-Frontend",
       liveLink: "https://shenshine.vercel.app/",
@@ -47,8 +32,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Caawiye Caafimaad",
-      description:
-        "Mobile app in Somali for women's health info. Top 5 at GirlsInICT 2025 out of 144 competitors.",
+      description: "Mobile app in Somali for women's health info. Top 5 at GirlsInICT 2025.",
       image: "/caawiye.jpeg",
       repoLink: "https://github.com/salmamokhtaar/Exactly",
       liveLink: "https://github.com/salmamokhtaar/Exactly",
@@ -58,8 +42,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Sara Flowers",
-      description:
-        "This project was developed using HTML, CSS, and JavaScript as part of my first-phase defense at Irise Academy.",
+      description: "HTML, CSS, JS project for first-phase defense at Irise Academy.",
       image: "/sara.png",
       repoLink: "https://github.com/salmamokhtaar/FrontEndProject",
       liveLink: "https://salmamokhtaar.github.io/FrontEndProject/",
@@ -68,8 +51,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Job Portal",
-      description:
-        "Full-stack application for my graduation defense at Irise Academy using React.js, Node.js, Express.js, MongoDB, and Nodemailer.",
+      description: "Full-stack app built for final defense using React.js, Node.js, Express, MongoDB.",
       image: "/job.png",
       repoLink: "https://github.com/salmamokhtaar/ClientSide",
       liveLink: "https://client-side-lake.vercel.app/",
@@ -78,8 +60,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Somali Quotes",
-      description:
-        "Somali Quotes showcases Somali Maahmaahyo (proverbs) with a Next and Previous button for easy navigation.",
+      description: "App to explore Somali proverbs with next/prev button navigation.",
       image: "soma.png",
       repoLink: "https://github.com/salmamokhtaar/SomaliQuotes",
       liveLink: "https://somaliquotesmaahmaahyo.vercel.app/",
@@ -88,8 +69,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Tasbih Project",
-      description:
-        "Tasbih is a simple React-based project for digital counting, featuring increment, decrement, and reset buttons.",
+      description: "React-based digital counter app with increment/decrement features.",
       image: "tasbix.png",
       repoLink: "https://github.com/salmamokhtaar/TasbihprojectReact",
       liveLink: "https://tasbihproject-react.vercel.app/",
@@ -98,8 +78,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Landing",
-      description:
-        "A visually appealing landing page built using HTML and CSS, designed to showcase key content and engage users.",
+      description: "Static HTML/CSS landing page to showcase branding.",
       image: "/agr.png",
       repoLink: "https://github.com/salmamokhtaar/Agrivast-Design",
       liveLink: "https://salmamokhtaar.github.io/Agrivast-Design/",
@@ -108,8 +87,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Harizon",
-      description:
-        "My first client project, created for a translation and editing business. Developed voluntarily and completed despite challenges.",
+      description: "Client project for translation business. Delivered voluntarily with complete UX flow.",
       image: "/hari.png",
       repoLink: "https://github.com/salmamokhtaar/Harizons",
       liveLink: "https://harizon.vercel.app/",
@@ -118,8 +96,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Broccoli",
-      description:
-        "Broccoli Organic – E-commerce Website A clean and responsive e-commerce website for an organic food store. Features include product listings, category filters, and a shopping cart system. Built using React.js and Tailwind CSS with a focus on user-friendly design and smooth functionality.",
+      description: "E-commerce app for organic food brand with cart and filters.",
       image: "/broccolli.png",
       repoLink: "https://github.com/salmamokhtaar/Broccoli",
       liveLink: "https://broccoliorganic.vercel.app/",
@@ -136,22 +113,24 @@ const ProjectsSection = () => {
           .slice(0, showAll ? projects.length : 4);
 
   return (
-    <section
-      id="projects"
-      className="py-20 px-4 gradient-bg"
-      ref={ref}
-    >
+    <section id="projects" className="py-20 px-4 gradient-bg" ref={ref}>
       <div className="container mx-auto max-w-6xl">
-        <h2 className="section-title">Recent Works</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-portfolio-purple dark:text-portfolio-purple-light mb-10">
+          Recent Works
+        </h2>
 
         {/* Filter Buttons */}
         <div className="mb-10 flex flex-wrap justify-center gap-3">
-          {["All", "Fullstack", "App"].map((category, index) => (
+          {["All", "Fullstack", "App"].map((category) => (
             <Button
               key={category}
               onClick={() => setFilter(category)}
               variant={filter === category ? "default" : "outline"}
-              className={`rounded-full ${filter === category ? 'bg-gradient-to-r from-portfolio-purple to-portfolio-teal border-none' : 'border-portfolio-purple-light text-portfolio-purple hover:bg-portfolio-purple-lighter/50 dark:text-portfolio-purple-light dark:border-portfolio-purple-light/30'}`}
+              className={`rounded-full ${
+                filter === category
+                  ? "bg-gradient-to-r from-portfolio-purple to-portfolio-teal border-none"
+                  : "border-portfolio-purple-light text-portfolio-purple hover:bg-portfolio-purple-lighter/50 dark:text-portfolio-purple-light dark:border-portfolio-purple-light/30"
+              }`}
             >
               {category}
             </Button>
@@ -159,25 +138,28 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className={`glassmorphism overflow-hidden group transition-all duration-500 hover:shadow-xl ${inView ? 'animate-fadeIn' : 'opacity-0'}`}
+              className={`glassmorphism overflow-hidden group transition-all duration-500 hover:shadow-xl ${
+                inView ? "animate-fadeIn" : "opacity-0"
+              }`}
               style={{
                 transitionDelay: `${0.1 * (index % 3 + 1)}s`,
-                borderImage: project.featured ? 'linear-gradient(45deg, rgb(155, 135, 245), rgb(56, 178, 172), rgb(249, 115, 22)) 1' : '',
-                borderImageSlice: project.featured ? '1' : '',
+                borderImage: project.featured
+                  ? "linear-gradient(45deg, rgb(155, 135, 245), rgb(56, 178, 172), rgb(249, 115, 22)) 1"
+                  : "",
+                borderImageSlice: project.featured ? "1" : "",
               }}
             >
-              {/* Project Image with Overlay */}
-              <div className="relative h-48 overflow-hidden">
+              {/* Project Image with Hover Overlay */}
+              <div className="relative aspect-video overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-4">
                     <a
@@ -216,10 +198,13 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
 
-                {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.tech?.map((tech, i) => (
-                    <Badge key={i} variant="outline" className="text-xs font-medium bg-portfolio-purple-lighter border-none text-portfolio-purple dark:bg-portfolio-purple/20 dark:text-portfolio-purple-light">
+                    <Badge
+                      key={i}
+                      variant="outline"
+                      className="text-xs font-medium bg-portfolio-purple-lighter border-none text-portfolio-purple dark:bg-portfolio-purple/30 dark:text-portfolio-purple-light"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -236,15 +221,17 @@ const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-portfolio-purple hover:text-portfolio-purple-dark dark:text-portfolio-purple-light dark:hover:text-white transition-colors flex items-center"
                   >
-                    <Code className="h-3.5 w-3.5 mr-1" /> Source
+                    <Code className="h-3.5 w-3.5 mr-1" />
+                    Source
                   </a>
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-portfolio-teal hover:text-portfolio-teal-dark flex items-center dark:text-portfolio-teal-light dark:hover:text-white transition-colors"
+                    className="text-sm font-medium text-portfolio-teal hover:text-portfolio-teal-dark dark:text-portfolio-teal-light dark:hover:text-white transition-colors flex items-center"
                   >
-                    Demo <ExternalLink className="ml-1 h-3.5 w-3.5" />
+                    Demo
+                    <ExternalLink className="ml-1 h-3.5 w-3.5" />
                   </a>
                 </div>
               </div>
@@ -252,7 +239,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Show More/Less Button */}
+        {/* Show More Button */}
         <div className="text-center mt-12">
           <Button
             onClick={() => setShowAll(!showAll)}
@@ -260,7 +247,9 @@ const ProjectsSection = () => {
             className="rounded-full border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple hover:text-white dark:border-portfolio-purple-light dark:text-portfolio-purple-light dark:hover:bg-portfolio-purple-light dark:hover:text-gray-900 group"
           >
             {showAll ? "Show Less" : "Show More Projects"}
-            {!showAll ? <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> : null}
+            {!showAll && (
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            )}
           </Button>
         </div>
       </div>
