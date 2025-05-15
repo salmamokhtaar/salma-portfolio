@@ -103,6 +103,16 @@ const ProjectsSection = () => {
       category: "Fullstack",
       tech: ["React", "Tailwind CSS", "Vite"],
     },
+    {
+  title: "Kaydka Buugaagta",
+  description: "Full-stack web app developed for final defense using the MERN stack. Features book browsing, search, downloads, and admin management.",
+  image: "/bookfro.png",
+  repoLink: "https://github.com/salmamokhtaar/Mern_Book_Project-Group", // replace with actual link if different
+  liveLink: "https://kaykabugaagta.vercel.app/", // replace with actual live link if different
+  category: "Fullstack",
+  tech: ["React.js", "Node.js", "MongoDB", "Express.js"],
+}
+
   ];
 
   const filteredProjects =
